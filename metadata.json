@@ -1,0 +1,6 @@
+{
+  "name": "F1 Telemetry Dashboard",
+  "description": "Real-time Formula 1 data visualization and telemetry dashboard using OpenF1 API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

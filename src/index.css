@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Titillium Web", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes f1-rev {
+  0% { transform: rotate(-130deg); }
+  /* Idle blips */
+  4% { transform: rotate(-90deg); }
+  8% { transform: rotate(-120deg); }
+  12% { transform: rotate(-100deg); }
+  
+  /* Gear 1 */
+  15% { transform: rotate(-110deg); }
+  25% { transform: rotate(120deg); } 
+  
+  /* Gear 2 */
+  26% { transform: rotate(30deg); } 
+  38% { transform: rotate(120deg); } 
+  
+  /* Gear 3 */
+  39% { transform: rotate(40deg); } 
+  55% { transform: rotate(120deg); } 
+  
+  /* Gear 4 */
+  56% { transform: rotate(50deg); } 
+  75% { transform: rotate(120deg); } 
+
+  /* Braking / Downshifts */
+  77% { transform: rotate(30deg); } /* brake */
+  80% { transform: rotate(80deg); } /* blip */
+  82% { transform: rotate(10deg); } /* brake */
+  85% { transform: rotate(60deg); } /* blip */
+  87% { transform: rotate(-50deg); } /* brake */
+  90% { transform: rotate(-10deg); } /* blip */
+  92% { transform: rotate(-100deg); } /* brake */
+  100% { transform: rotate(-130deg); } /* idle */
+}
+
+.animate-f1-rev {
+  animation: f1-rev 3s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
